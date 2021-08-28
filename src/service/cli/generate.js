@@ -23,10 +23,10 @@ const {
 const generatePublications = (count) => (
   Array(count).fill({}).map(() => ({
     title: TITLES[getRandomInt(0, TITLES.length - 1)],
-    category: [CATEGORIES[getRandomInt(0, CATEGORIES.length - 1)]],
+    category: shuffle(CATEGORIES).slice(1, getRandomInt(1, CATEGORIES.length - 1)),
     announce: shuffle(SENTENCES).slice(1, 5).join(` `),
-    fullText: shuffle(SENTENCES).slice(1, SENTENCES.length - 1).join(` `),
-    createdDate: getRandomDate(),
+    fullText: shuffle(SENTENCES).slice(1, getRandomInt(1, SENTENCES.length - 1)).join(` `),
+    createdDate: getRandomDate().toISOString().replace(/T/, ' ').replace(/\..+/, ''),
   }))
 );
 
