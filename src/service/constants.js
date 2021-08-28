@@ -52,6 +52,15 @@ const CATEGORIES = [
   `Железо`
 ];
 
+const HELP_MESSAGE = `Программа запускает http-сервер и формирует файл с данными для API.
+
+     Гайд:
+     service.js <command>
+     Команды:
+      --version: выводит номер версии
+      --help: печатает этот текст
+      --generate <count> формирует файл mocks.json`;
+
 const ExitCode = {
   error: 1,
   success: 0
@@ -69,6 +78,7 @@ module.exports = {
   DEFAULT_COMMAND,
   USER_ARGV_INDEX,
   FILE_NAME,
+  HELP_MESSAGE,
   PublicationCount,
   ExitCode
 }
