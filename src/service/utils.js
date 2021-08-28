@@ -37,8 +37,8 @@ module.exports.getRandomDate = () => {
   const getBeforeDate = () => {
     const date = new Date();
     return new Date(date.setDate(date.getMonth() - 3));
-  }
+  };
   const randomizer = (start, end) => new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));
 
   return randomizer(getBeforeDate(), today);
-}
+};

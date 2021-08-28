@@ -1,3 +1,5 @@
+'use strict';
+
 const FILE_NAME = `mock.json`;
 const USER_ARGV_INDEX = 2;
 const DEFAULT_COMMAND = `--help`;
@@ -81,4 +83,4 @@ module.exports = {
   HELP_MESSAGE,
   PublicationCount,
   ExitCode
-}
+};
